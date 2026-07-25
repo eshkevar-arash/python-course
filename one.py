@@ -1,6 +1,11 @@
-def xxx(a, b, c):
-    return b
+def xxx(**m):
+    return m["y"]
 
-l = [1,2,3]
-x = xxx(*l)
+
+d = {
+    "x": 1,
+    "y": 2,
+    "z": 3
+}
+x = xxx(**d)
 print(x)
