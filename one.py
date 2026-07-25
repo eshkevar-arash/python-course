@@ -1,6 +1,6 @@
-def xxx(a, *b, c, d ):
+def xxx(a, b, c):
     return b
 
-
-x = xxx(2, 4, 5, -6, c= 90, d = 120)
+l = [1,2,3]
+x = xxx(*l)
 print(x)
