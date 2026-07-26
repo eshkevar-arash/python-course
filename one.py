@@ -1,6 +1,6 @@
-def func(a, b, *c, d):
-    return d
+def func(**a):
+    return a["b"]
 
 
-x = func(1, 2, 3, 4, d=5)
+x = func(a=2, b=3)
 print(x)
