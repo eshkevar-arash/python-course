@@ -1,6 +1,6 @@
-def func(**a):
-    return a["b"]
+def max_3(a, b, c):
+    """return max or three numbers"""
+    return max(a, b, c)
 
 
-x = func(a=2, b=3)
-print(x)
+print(max_3.__doc__)
