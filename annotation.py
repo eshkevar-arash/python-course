@@ -1,7 +1,7 @@
-def test(a: int, b: float, c: int):
-    print("a:", a)
-    print("b:", b)
-    print("c:", c)
+def test(a: int, b: float, c: int) -> float:
+    sum_number = a + b + c
+    return sum_number
 
 
-test(1,3,"arash")
+
+print(test(1, 2, 4))
