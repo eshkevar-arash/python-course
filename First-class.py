@@ -1,7 +1,17 @@
-def A(a):
-    print(a)
-    def B(b):
-        print(b **2)
-    B(a)
+def descending(l):
+    return sorted(l)
 
-A(3)
+
+def ascending(l):
+    return sorted(l, reverse=True)
+
+
+def mySort(f, l):
+    return f(l)
+
+my_list = [1,4,2,6,3,8]
+ascending_list = mySort(ascending, my_list)
+print(ascending_list)
+
+descending_list = mySort(descending, my_list)
+print(descending_list)
