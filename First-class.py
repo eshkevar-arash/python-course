@@ -1,17 +1,16 @@
-def descending(l):
-    return sorted(l)
+def my_sort(s):
+    def descending(l):
+        return sorted(l)
 
+    def ascending(l):
+        return sorted(l, reverse=True)
+    if s == "a":
+        return ascending
+    elif s == "d":
+        return descending
 
-def ascending(l):
-    return sorted(l, reverse=True)
-
-
-def mySort(f, l):
-    return f(l)
-
-my_list = [1,4,2,6,3,8]
-ascending_list = mySort(ascending, my_list)
-print(ascending_list)
-
-descending_list = mySort(descending, my_list)
-print(descending_list)
+myList = [1,3,2,5,4,7,6]
+print(myList)
+action = input("enter action: ")
+f = my_sort(action)
+print(f(myList))
