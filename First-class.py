@@ -1,16 +1,24 @@
-def my_sort(s):
+def my_sort(action):
     def descending(l):
         return sorted(l)
 
     def ascending(l):
         return sorted(l, reverse=True)
-    if s == "a":
-        return ascending
-    elif s == "d":
-        return descending
 
-myList = [1,3,2,5,4,7,6]
-print(myList)
-action = input("enter action: ")
+    def error(l):
+        return f"Error!!!, {action}"
+
+
+    if action == "a":
+        return ascending
+    elif action == "d":
+        return descending
+    else:
+        return error
+
+
+l = [2, 1, 4, 3, 6, 5]
+print(l)
+action = input("enter action: \n")
 f = my_sort(action)
-print(f(myList))
+print(f(l))
