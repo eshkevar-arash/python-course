@@ -1,12 +1,9 @@
-x = 10
-def A():
-    x = 11
+x = 1
+def func(a):
+    a += 1
+    print(a)
 
-    def B():
-        global x
-        x += 1
-        print(x)
-    B()
 
-A()
+
+func(x)
 print(x)
