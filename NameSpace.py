@@ -1,14 +1,14 @@
-l = [100, 20, 3, 80, 600]
+
+def func_isChar(ch):
+    ascii_cod = ord(ch)
+    if (97 <= ascii_cod <= 122) | (48 <= ascii_cod <= 57) | (65 <= ascii_cod <= 90):
+        return True
+
+    return False
 
 
-def func_max(iterable):
-    mx = iterable[0]
-    for i in range(len(iterable) - 1):
-        if iterable[i + 1] > mx:
-            mx = iterable[i + 1]
+ch = input("enter a charactor: \n")[0]
+print(ch)
+isChar = func_isChar(ch)
+print(isChar)
 
-    return mx
-
-
-mx = func_max(l)
-print(mx)
