@@ -10,5 +10,6 @@ li = [1, 2, 3]
 # print(li_2)
 # a = list(filter(lambda item: item % 2 == 0, li))
 # print(a)
-res = [item for item in li if item % 2 == 0]
+names = ["arash", "adel", "aref"]
+res = [item.upper() for item in names]
 print(res)
