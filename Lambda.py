@@ -1,15 +1,12 @@
-def func(x):
-    return x + 1
+from functools import reduce
+
+s = "12.012w"
 
 
-li = [1, 2, 3]
-# a = map(lambda x: x + 1, li)
-# print(list(a))
-
-# li_2 = [item * 2 for item in li]
-# print(li_2)
-# a = list(filter(lambda item: item % 2 == 0, li))
-# print(a)
-names = ["arash", "adel", "aref"]
-res = [item.upper() for item in names]
-print(res)
+def is_numeric(s):
+    try:
+        float(s)
+        return True
+    except ValueError:
+        return False
+print(is_numeric(s))
