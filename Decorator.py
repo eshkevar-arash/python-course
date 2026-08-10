@@ -1,9 +1,13 @@
-def outer():
-    def inner():
-        print("Hello")
-
-    return inner
+def say_hello():
+    print("Hello arash")
 
 
-f = outer()
-f()
+def say_bye():
+    print("by arash")
+def wrapper(f):
+    print("Before")
+    f()
+    print("After")
+
+
+wrapper(say_bye)
