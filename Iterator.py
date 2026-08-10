@@ -1,6 +1,10 @@
-numbers = [5, 10, 15, 20]
+from itertools import count
 
-it = iter(numbers)
+counter = count(20)
 
-print(next(it))
-print(next(it))
+while True:
+    number = next(counter)
+    print(number)
+    if number == 30:
+        break
+
