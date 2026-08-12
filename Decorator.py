@@ -1,13 +1,8 @@
-def say_hello():
-    print("Hello arash")
+def outer():
+    def inner():
+        return "inner-func is run"
+    return inner
 
-
-def say_bye():
-    print("by arash")
-def wrapper(f):
-    print("Before")
-    f()
-    print("After")
-
-
-wrapper(say_bye)
+x = outer()
+res = x()
+print(res)
