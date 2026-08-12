@@ -1,8 +1,15 @@
-def outer():
-    def inner():
-        return "inner-func is run"
-    return inner
+def say_hello():
+    print("hello")
 
-x = outer()
-res = x()
-print(res)
+
+def decorator(func):
+
+    def wrapper():
+        print("Before")
+        func()
+        print("After")
+
+    return wrapper
+
+x = decorator(say_hello)
+x()
