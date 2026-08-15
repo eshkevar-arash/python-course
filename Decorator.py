@@ -4,11 +4,12 @@ def dec(func):
         func()
     return inner
 
+@dec
 def f():
     print("hello")
-
-
-f = dec(f)
 f()
+
+
+
 
 
