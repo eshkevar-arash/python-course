@@ -1,21 +1,14 @@
-def decorator(func):
-    def wrapper(*args, **kwargs):
-        print("before")
+def dec(func):
+    def inner():
+        print("inner Run")
+        func()
+    return inner
 
-        result = func(*args, **kwargs)
-
-        print("after")
-
-        return result
-
-    return wrapper
+def f():
+    print("hello")
 
 
+f = dec(f)
+f()
 
 
-
-@decorator
-def add(a, b):
-    return a + b
-res = add(2, 3)
-print(res)
